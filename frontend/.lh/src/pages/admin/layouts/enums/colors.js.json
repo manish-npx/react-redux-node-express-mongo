@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/admin/layouts/enums/colors.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1701263033321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1701263033321,
+            "name": "Commit-0",
+            "content": "export default {\n    black: 'bg-black',\n    blue: 'bg-blue',\n    light: 'bg-light',\n    peach: 'bg-peach',\n    purple: 'bg-purple',\n    aqua: 'bg-aqua'\n}"
+        }
+    ]
+}

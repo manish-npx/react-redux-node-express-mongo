@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/admin/layouts/Item.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1701263046882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701263294975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+import React from 'react'\n+import colors from '../enums/colors'\n+import colorsHovered from './enums/colors-hovered'\n+\n+const Item = ({ bgColor, children, onClick, classes }) => {\n+    const color = `${colorsHovered[bgColor]} ${colors[bgColor]}`\n+\n+    return (\n+        <div\n+            onClick={onClick}\n+            className={`item ${color} ${classes && classes}`}>\n+            {children}\n+        </div>\n+    )\n+}\n+\n+export default Item\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1701263046881,
+            "name": "Commit-0",
+            "content": "import React from 'react'\nimport colors from '../enums/colors'\nimport colorsHovered from '../enums/colors-hovered'\n\nconst Item = ({ bgColor, children, onClick, classes }) => {\n    const color = `${colorsHovered[bgColor]} ${colors[bgColor]}`\n\n    return (\n        <div\n            onClick={onClick}\n            className={`item ${color} ${classes && classes}`}>\n            {children}\n        </div>\n    )\n}\n\nexport default Item"
+        }
+    ]
+}

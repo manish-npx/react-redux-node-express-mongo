@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/routes/PublicRoutes.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1701191041932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701347108567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,18 @@\n-import { Navigate, Route, Routes } from \"react-router-dom\";\n import AdminRoute from \"./AdminRoute\";\n+import Dashboard from \"../pages/admin/dashboard/Dashboard\";\n import Login from \"../pages/Login\";\n+import Page404 from \"../errors/404\";\n import Register from \"../pages/Register\";\n-import Dashboard from \"../pages/admin/dashboard/Dashboard\";\n-import Page404 from \"../errors/404\";\n+import { Navigate, Route, Routes } from \"react-router-dom\";\n \n const PublicRoutes = () => {\n   return (\n     <>\n       <Routes>\n         <Route element={<AdminRoute />}>\n           <Route path=\"/dashboard\" element={<Dashboard />} />\n+          <Route path=\"/home\" element={<Dashboard />} />\n         </Route>\n \n         <Route path=\"/login\" element={<Login />} />\n         <Route path=\"/\" element={<Login />} />\n"
+                },
+                {
+                    "date": 1701447013684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import AdminRoute from \"./AdminRoute\";\n import Dashboard from \"../pages/admin/dashboard/Dashboard\";\n-import Login from \"../pages/Login\";\n+import Login from \"../pages/auth/Login\";\n import Page404 from \"../errors/404\";\n import Register from \"../pages/Register\";\n import { Navigate, Route, Routes } from \"react-router-dom\";\n \n@@ -10,9 +10,8 @@\n     <>\n       <Routes>\n         <Route element={<AdminRoute />}>\n           <Route path=\"/dashboard\" element={<Dashboard />} />\n-          <Route path=\"/home\" element={<Dashboard />} />\n         </Route>\n \n         <Route path=\"/login\" element={<Login />} />\n         <Route path=\"/\" element={<Login />} />\n"
+                },
+                {
+                    "date": 1701447073520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import AdminRoute from \"./AdminRoute\";\n import Dashboard from \"../pages/admin/dashboard/Dashboard\";\n-import Login from \"../pages/auth/Login\";\n+import Login from \"../pages/Login\";\n import Page404 from \"../errors/404\";\n-import Register from \"../pages/Register\";\n+import Register from \"../pages/auth/Register\";\n import { Navigate, Route, Routes } from \"react-router-dom\";\n \n const PublicRoutes = () => {\n   return (\n"
+                },
+                {
+                    "date": 1701447280223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,20 @@\n import AdminRoute from \"./AdminRoute\";\n import Dashboard from \"../pages/admin/dashboard/Dashboard\";\n import Login from \"../pages/Login\";\n import Page404 from \"../errors/404\";\n-import Register from \"../pages/auth/Register\";\n+import Register from \"../pages/Register\";\n import { Navigate, Route, Routes } from \"react-router-dom\";\n \n const PublicRoutes = () => {\n   return (\n     <>\n       <Routes>\n         <Route element={<AdminRoute />}>\n           <Route path=\"/dashboard\" element={<Dashboard />} />\n+          <Route path=\"/dashboard\" element={<Dashboard />} />\n+          <Route path=\"/dashboard\" element={<Dashboard />} />\n+          <Route path=\"/dashboard\" element={<Dashboard />} />\n         </Route>\n \n         <Route path=\"/login\" element={<Login />} />\n         <Route path=\"/\" element={<Login />} />\n"
+                },
+                {
+                    "date": 1701447306355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import AdminRoute from \"./AdminRoute\";\n+import Contacts from \"~pages/admin/contacts/Contacts\";\n import Dashboard from \"../pages/admin/dashboard/Dashboard\";\n import Login from \"../pages/Login\";\n import Page404 from \"../errors/404\";\n import Register from \"../pages/Register\";\n@@ -10,11 +11,11 @@\n     <>\n       <Routes>\n         <Route element={<AdminRoute />}>\n           <Route path=\"/dashboard\" element={<Dashboard />} />\n+          <Route path=\"/contacts\" element={<Contacts />} />\n           <Route path=\"/dashboard\" element={<Dashboard />} />\n           <Route path=\"/dashboard\" element={<Dashboard />} />\n-          <Route path=\"/dashboard\" element={<Dashboard />} />\n         </Route>\n \n         <Route path=\"/login\" element={<Login />} />\n         <Route path=\"/\" element={<Login />} />\n"
+                },
+                {
+                    "date": 1701447314915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n       <Routes>\n         <Route element={<AdminRoute />}>\n           <Route path=\"/dashboard\" element={<Dashboard />} />\n           <Route path=\"/contacts\" element={<Contacts />} />\n+          <Route path=\"/pipeline\" element={<Dashboard />} />\n           <Route path=\"/dashboard\" element={<Dashboard />} />\n-          <Route path=\"/dashboard\" element={<Dashboard />} />\n         </Route>\n \n         <Route path=\"/login\" element={<Login />} />\n         <Route path=\"/\" element={<Login />} />\n"
+                },
+                {
+                    "date": 1701447337876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import AdminRoute from \"./AdminRoute\";\n import Contacts from \"~pages/admin/contacts/Contacts\";\n+import Conversations from \"~pages/admin/conversations/Conversations\";\n import Dashboard from \"../pages/admin/dashboard/Dashboard\";\n import Login from \"../pages/Login\";\n import Page404 from \"../errors/404\";\n+import Pipeline from \"~pages/admin/pipeline/Pipeline\";\n import Register from \"../pages/Register\";\n import { Navigate, Route, Routes } from \"react-router-dom\";\n \n const PublicRoutes = () => {\n@@ -12,10 +14,10 @@\n       <Routes>\n         <Route element={<AdminRoute />}>\n           <Route path=\"/dashboard\" element={<Dashboard />} />\n           <Route path=\"/contacts\" element={<Contacts />} />\n-          <Route path=\"/pipeline\" element={<Dashboard />} />\n-          <Route path=\"/dashboard\" element={<Dashboard />} />\n+          <Route path=\"/pipeline\" element={<Pipeline />} />\n+          <Route path=\"/conversations\" element={<Conversations />} />\n         </Route>\n \n         <Route path=\"/login\" element={<Login />} />\n         <Route path=\"/\" element={<Login />} />\n"
+                },
+                {
+                    "date": 1701447354206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import AdminRoute from \"./AdminRoute\";\n+import Campaigns from \"~pages/admin/campaigns/Campaigns\";\n import Contacts from \"~pages/admin/contacts/Contacts\";\n import Conversations from \"~pages/admin/conversations/Conversations\";\n import Dashboard from \"../pages/admin/dashboard/Dashboard\";\n import Login from \"../pages/Login\";\n@@ -16,8 +17,9 @@\n           <Route path=\"/dashboard\" element={<Dashboard />} />\n           <Route path=\"/contacts\" element={<Contacts />} />\n           <Route path=\"/pipeline\" element={<Pipeline />} />\n           <Route path=\"/conversations\" element={<Conversations />} />\n+          <Route path=\"/campaigns\" element={<Campaigns />} />\n         </Route>\n \n         <Route path=\"/login\" element={<Login />} />\n         <Route path=\"/\" element={<Login />} />\n"
+                }
+            ],
+            "date": 1701191041932,
+            "name": "Commit-0",
+            "content": "import { Navigate, Route, Routes } from \"react-router-dom\";\nimport AdminRoute from \"./AdminRoute\";\nimport Login from \"../pages/Login\";\nimport Register from \"../pages/Register\";\nimport Dashboard from \"../pages/admin/dashboard/Dashboard\";\nimport Page404 from \"../errors/404\";\n\nconst PublicRoutes = () => {\n  return (\n    <>\n      <Routes>\n        <Route element={<AdminRoute />}>\n          <Route path=\"/dashboard\" element={<Dashboard />} />\n        </Route>\n\n        <Route path=\"/login\" element={<Login />} />\n        <Route path=\"/\" element={<Login />} />\n        <Route path=\"/register\" element={<Register />} />\n        <Route path=\"/404\" element={<Page404 />} />\n        <Route path=\"*\" element={<Navigate to=\"/404\" />} />\n      </Routes>\n    </>\n  );\n};\n\nexport default PublicRoutes;\n"
+        }
+    ]
+}

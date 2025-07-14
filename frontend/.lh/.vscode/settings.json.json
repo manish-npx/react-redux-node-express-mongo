@@ -1,0 +1,46 @@
+{
+    "sourceFile": ".vscode/settings.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1701429704909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701429709175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,7 @@\n         \"**/.hg\": true,\n         \"**/CVS\": true,\n         \"**/.DS_Store\": true,\n         \"**/Thumbs.db\": true\n-    }\n+    },\n+    \"hide-files.files\": []\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701430061096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,8 @@\n         \"**/CVS\": true,\n         \"**/.DS_Store\": true,\n         \"**/Thumbs.db\": true\n     },\n-    \"hide-files.files\": []\n+    \"hide-files.files\": [\n+        \"postcss.config.js\"\n+    ]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701430072594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,12 @@\n         \"**/.svn\": true,\n         \"**/.hg\": true,\n         \"**/CVS\": true,\n         \"**/.DS_Store\": true,\n-        \"**/Thumbs.db\": true\n+        \"**/Thumbs.db\": true,\n+        \"postcss.config.js\": true\n     },\n     \"hide-files.files\": [\n-        \"postcss.config.js\"\n+        \"postcss.config.js\",\n+        \"tailwind.config.js\"\n     ]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701430080346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,13 @@\n         \"**/.hg\": true,\n         \"**/CVS\": true,\n         \"**/.DS_Store\": true,\n         \"**/Thumbs.db\": true,\n-        \"postcss.config.js\": true\n+        \"postcss.config.js\": true,\n+        \"tailwind.config.js\": true\n     },\n     \"hide-files.files\": [\n         \"postcss.config.js\",\n-        \"tailwind.config.js\"\n+        \"tailwind.config.js\",\n+        \".lh\"\n     ]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701430095946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,12 +6,16 @@\n         \"**/CVS\": true,\n         \"**/.DS_Store\": true,\n         \"**/Thumbs.db\": true,\n         \"postcss.config.js\": true,\n-        \"tailwind.config.js\": true\n+        \"tailwind.config.js\": true,\n+        \".lh\": true,\n+        \".vscode\": true\n     },\n     \"hide-files.files\": [\n         \"postcss.config.js\",\n         \"tailwind.config.js\",\n-        \".lh\"\n+        \".lh\",\n+        \".vscode\",\n+        \"jsconfig.json\"\n     ]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701430441624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,14 +8,16 @@\n         \"**/Thumbs.db\": true,\n         \"postcss.config.js\": true,\n         \"tailwind.config.js\": true,\n         \".lh\": true,\n-        \".vscode\": true\n+        \".vscode\": true,\n+        \"jsconfig.json\": true\n     },\n     \"hide-files.files\": [\n         \"postcss.config.js\",\n         \"tailwind.config.js\",\n         \".lh\",\n         \".vscode\",\n-        \"jsconfig.json\"\n+        \"jsconfig.json\",\n+        \".gitignore\"\n     ]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701430442619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n         \"tailwind.config.js\",\n         \".lh\",\n         \".vscode\",\n         \"jsconfig.json\",\n-        \".gitignore\"\n+        \"README.md\"\n     ]\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1701429704909,
+            "name": "Commit-0",
+            "content": "{\n    \"files.exclude\": {\n        \"**/.git\": true,\n        \"**/.svn\": true,\n        \"**/.hg\": true,\n        \"**/CVS\": true,\n        \"**/.DS_Store\": true,\n        \"**/Thumbs.db\": true\n    }\n}"
+        }
+    ]
+}

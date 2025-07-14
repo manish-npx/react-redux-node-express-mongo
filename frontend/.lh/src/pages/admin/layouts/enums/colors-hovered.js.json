@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/admin/layouts/enums/colors-hovered.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1701263019553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1701263019553,
+            "name": "Commit-0",
+            "content": "export default {\n    black: 'black-hover',\n    blue: 'blue-hover',\n    light: 'light-hover',\n    peach: 'peach-hover',\n    purple: 'purple-hover',\n    aqua: 'aqua-hover'\n}"
+        }
+    ]
+}

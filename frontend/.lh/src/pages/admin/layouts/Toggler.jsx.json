@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/admin/layouts/Toggler.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1701262856303,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1701262856303,
+            "name": "Commit-0",
+            "content": "import React from 'react'\n\nconst Toggler = ({ isCollapsed, toggleIsOpen, classes }) => {\n    return (\n        <span\n            onClick={() => toggleIsOpen(!isCollapsed)}\n            className={classes}>\n            {\n                !isCollapsed ?\n                    <i className='fas fa-times toggler' />\n                    :\n                    <i className='fas fa-bars toggler' />\n            }\n        </span>\n    )\n}\n\nexport default Toggler"
+        }
+    ]
+}

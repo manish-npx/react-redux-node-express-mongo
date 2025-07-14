@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/pages/admin/layouts/Sidebar.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1701262833879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701263164227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,36 @@\n+import React, { useState, useEffect } from 'react';\n+import '../../../style/adminSideBar.css';\n+import colors from '../enums/colors';\n+import Toggler from './Toggler';\n+\n+const Sidebar = ({ bgColor, children, isCollapsed, position = 'left', classes }) => {\n+    const [isOpen, toggleIsOpen] = useState(isCollapsed);\n+    const [prevIsCollapseFromParent, setParentCollapse] = useState(!isCollapsed);\n+    const color = colors[bgColor] || colors['white'];\n+    const [classCollapsed, setCollapsed] = useState('');\n+\n+    useEffect(() => {\n+        const c = isOpen ? ` collapsed ` : '';\n+        setCollapsed(c);\n+        if (isCollapsed === prevIsCollapseFromParent) {\n+            toggleIsOpen(isCollapsed);\n+            setParentCollapse(!isCollapsed);\n+        }\n+    }, [isOpen, isCollapsed]);\n+\n+    const toggleIsOpenCustom = (val) => {\n+        isCollapsed = val;\n+        toggleIsOpen(val);\n+    };\n+\n+    return (\n+        <div className={`container-wrapper ${color} ${classCollapsed} ${classes} pos-${position}`}>\n+            <Toggler isCollapsed={isOpen} toggleIsOpen={toggleIsOpen} />\n+            {\n+                isOpen ? '' : children\n+            }\n+        </div>\n+    )\n+};\n+\n+export default Sidebar;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1701263284797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState, useEffect } from 'react';\n import '../../../style/adminSideBar.css';\n-import colors from '../enums/colors';\n+import colors from './enums/colors';\n import Toggler from './Toggler';\n \n const Sidebar = ({ bgColor, children, isCollapsed, position = 'left', classes }) => {\n     const [isOpen, toggleIsOpen] = useState(isCollapsed);\n@@ -32,41 +32,5 @@\n         </div>\n     )\n };\n \n-export default Sidebar;\n-import React, { useState, useEffect } from 'react';\n-import '../styles.module.css';\n-import colors from '../enums/colors';\n-import Toggler from './Toggler';\n-\n-const Sidebar = ({ bgColor, children, isCollapsed, position = 'left', classes }) => {\n-    const [isOpen, toggleIsOpen] = useState(isCollapsed);\n-    const [prevIsCollapseFromParent, setParentCollapse] = useState(!isCollapsed);\n-    const color = colors[bgColor] || colors['white'];\n-    const [classCollapsed, setCollapsed] = useState('');\n-\n-    useEffect(() => {\n-        const c = isOpen ? ` collapsed ` : '';\n-        setCollapsed(c);\n-        if (isCollapsed === prevIsCollapseFromParent) {\n-            toggleIsOpen(isCollapsed);\n-            setParentCollapse(!isCollapsed);\n-        }\n-    }, [isOpen, isCollapsed]);\n-\n-    const toggleIsOpenCustom = (val) => {\n-        isCollapsed = val;\n-        toggleIsOpen(val);\n-    };\n-\n-    return (\n-        <div className={`container-wrapper ${color} ${classCollapsed} ${classes} pos-${position}`}>\n-            <Toggler isCollapsed={isOpen} toggleIsOpen={toggleIsOpen} />\n-            {\n-                isOpen ? '' : children\n-            }\n-        </div>\n-    )\n-};\n-\n export default Sidebar;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1701262833879,
+            "name": "Commit-0",
+            "content": "import React, { useState, useEffect } from 'react';\nimport '../styles.module.css';\nimport colors from '../enums/colors';\nimport Toggler from './Toggler';\n\nconst Sidebar = ({ bgColor, children, isCollapsed, position = 'left', classes }) => {\n    const [isOpen, toggleIsOpen] = useState(isCollapsed);\n    const [prevIsCollapseFromParent, setParentCollapse] = useState(!isCollapsed);\n    const color = colors[bgColor] || colors['white'];\n    const [classCollapsed, setCollapsed] = useState('');\n\n    useEffect(() => {\n        const c = isOpen ? ` collapsed ` : '';\n        setCollapsed(c);\n        if (isCollapsed === prevIsCollapseFromParent) {\n            toggleIsOpen(isCollapsed);\n            setParentCollapse(!isCollapsed);\n        }\n    }, [isOpen, isCollapsed]);\n\n    const toggleIsOpenCustom = (val) => {\n        isCollapsed = val;\n        toggleIsOpen(val);\n    };\n\n    return (\n        <div className={`container-wrapper ${color} ${classCollapsed} ${classes} pos-${position}`}>\n            <Toggler isCollapsed={isOpen} toggleIsOpen={toggleIsOpen} />\n            {\n                isOpen ? '' : children\n            }\n        </div>\n    )\n};\n\nexport default Sidebar;"
+        }
+    ]
+}

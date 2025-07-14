@@ -1,0 +1,22 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1701430159537,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701441982515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,55 @@\n+{\n+  \"name\": \"BlitzMarketing\",\n+  \"author\": \"BlitzMarketing-MKPB\",\n+  \"license\": \"BlitzMarketing-MKPB\",\n+  \"private\": true,\n+  \"version\": \"0.1.0\",\n+  \"type\": \"module\",\n+  \"scripts\": {\n+    \"dev\": \"vite\",\n+    \"build\": \"vite build\",\n+    \"lint\": \"eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0\",\n+    \"preview\": \"vite preview\"\n+  },\n+  \"eslintConfig\": {\n+    \"extends\": [\n+      \"react-app\",\n+      \"react-app/jest\"\n+    ]\n+  },\n+  \"browserslist\": {\n+    \"production\": [\n+      \">0.2%\",\n+      \"not dead\",\n+      \"not op_mini all\"\n+    ],\n+    \"development\": [\n+      \"last 1 chrome version\",\n+      \"last 1 firefox version\",\n+      \"last 1 safari version\"\n+    ]\n+  },\n+  \"dependencies\": {\n+    \"@reduxjs/toolkit\": \"^1.9.7\",\n+    \"axios\": \"^1.5.1\",\n+    \"bootstrap\": \"^5.3.2\",\n+    \"bootstrap-icons\": \"^1.11.2\",\n+    \"react\": \"^18.2.0\",\n+    \"react-bootstrap\": \"^2.9.1\",\n+    \"react-dom\": \"^18.2.0\",\n+    \"react-hot-toast\": \"^2.4.1\",\n+    \"react-redux\": \"^8.1.3\",\n+    \"react-router-dom\": \"^6.20.0\",\n+    \"react-scripts\": \"^5.0.1\"\n+  },\n+  \"devDependencies\": {\n+    \"@vitejs/plugin-react-swc\": \"^3.5.0\",\n+    \"eslint\": \"^8.53.0\",\n+    \"eslint-plugin-import\": \"^2.29.0\",\n+    \"eslint-plugin-react\": \"^7.33.2\",\n+    \"eslint-plugin-react-hooks\": \"^4.6.0\",\n+    \"eslint-plugin-react-refresh\": \"^0.4.4\",\n+    \"vite\": \"^5.0.0\",\n+    \"vite-aliases\": \"^0.11.3\"\n+  }\n+}\n"
+                }
+            ],
+            "date": 1701430159537,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"BlitzMarketing\",\n  \"author\": \"BlitzMarketing-MKPB\",\n  \"license\": \"BlitzMarketing-MKPB\",\n  \"private\": true,\n  \"version\": \"0.1.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"vite build\",\n    \"lint\": \"eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0\",\n    \"preview\": \"vite preview\"\n  },\n  \"eslintConfig\": {\n    \"extends\": [\n      \"react-app\",\n      \"react-app/jest\"\n    ]\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  },\n  \"dependencies\": {\n    \"@reduxjs/toolkit\": \"^1.9.7\",\n    \"axios\": \"^1.5.1\",\n    \"bootstrap\": \"^5.3.2\",\n    \"bootstrap-icons\": \"^1.11.2\",\n    \"react\": \"^18.2.0\",\n    \"react-bootstrap\": \"^2.9.1\",\n    \"react-dom\": \"^18.2.0\",\n    \"react-hot-toast\": \"^2.4.1\",\n    \"react-redux\": \"^8.1.3\",\n    \"react-router-dom\": \"^6.20.0\",\n    \"react-scripts\": \"^5.0.1\"\n  },\n  \"devDependencies\": {\n    \"@vitejs/plugin-react-swc\": \"^3.5.0\",\n    \"autoprefixer\": \"^10\",\n    \"eslint\": \"^8.53.0\",\n    \"eslint-plugin-import\": \"^2.29.0\",\n    \"eslint-plugin-react\": \"^7.33.2\",\n    \"eslint-plugin-react-hooks\": \"^4.6.0\",\n    \"eslint-plugin-react-refresh\": \"^0.4.4\",\n    \"postcss\": \"^8\",\n    \"vite\": \"^5.0.0\",\n    \"vite-aliases\": \"^0.11.3\"\n  }\n}\n"
+        }
+    ]
+}

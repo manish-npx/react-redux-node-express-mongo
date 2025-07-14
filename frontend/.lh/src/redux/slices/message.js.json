@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/redux/slices/message.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1701257149284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701257207799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n   name: \"message\",\n   initialState,\n   reducers: {\n     setMessage: (state, action) => {\n+      console.log('clear Message')\n+\n       return { message: action.payload };\n     },\n     clearMessage: () => {\n       console.log('clear Message')\n"
+                },
+                {
+                    "date": 1701257212979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n   name: \"message\",\n   initialState,\n   reducers: {\n     setMessage: (state, action) => {\n-      console.log('clear Message')\n-\n+      console.log('Set Message')\n       return { message: action.payload };\n     },\n     clearMessage: () => {\n       console.log('clear Message')\n"
+                },
+                {
+                    "date": 1701257619579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\n+\n+const initialState = {};\n+\n+const messageSlice = createSlice({\n+  name: \"message\",\n+  initialState,\n+  reducers: {\n+    setMessage: (state, action) => {\n+      console.log('Set Message')\n+      return { message: action.payload };\n+    },\n+    clearMessage: () => {\n+      console.log('clear Message')\n+      return { message: \"\" };\n+    },\n+  },\n+});\n+\n+const { reducer, actions } = messageSlice;\n+\n+export const { setMessage, clearMessage } = actions;\n+export default reducer;\n"
+                },
+                {
+                    "date": 1701258069574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n   name: \"message\",\n   initialState,\n   reducers: {\n     setMessage: (state, action) => {\n-      console.log('Set Message')\n       return { message: action.payload };\n     },\n     clearMessage: () => {\n       console.log('clear Message')\n@@ -20,27 +19,4 @@\n const { reducer, actions } = messageSlice;\n \n export const { setMessage, clearMessage } = actions;\n export default reducer;\n-import { createSlice } from \"@reduxjs/toolkit\";\n-\n-const initialState = {};\n-\n-const messageSlice = createSlice({\n-  name: \"message\",\n-  initialState,\n-  reducers: {\n-    setMessage: (state, action) => {\n-      console.log('Set Message')\n-      return { message: action.payload };\n-    },\n-    clearMessage: () => {\n-      console.log('clear Message')\n-      return { message: \"\" };\n-    },\n-  },\n-});\n-\n-const { reducer, actions } = messageSlice;\n-\n-export const { setMessage, clearMessage } = actions;\n-export default reducer;\n"
+                },
+                {
+                    "date": 1701258290440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\n+\n+const initialState = {};\n+\n+const messageSlice = createSlice({\n+  name: \"message\",\n+  initialState,\n+  reducers: {\n+    setMessage: (state, action) => {\n+      console.log(action.payload, \"check action payload\")\n+      return { message: action.payload };\n+    },\n+    clearMessage: () => {\n+      console.log('clear Message')\n+      return { message: \"\" };\n+    },\n+  },\n+});\n+\n+const { reducer, actions } = messageSlice;\n+\n+export const { setMessage, clearMessage } = actions;\n+export default reducer;\n"
+                },
+                {
+                    "date": 1701258344497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,23 @@\n+import { createSlice } from \"@reduxjs/toolkit\";\n+\n+const initialState = {};\n+\n+const messageSlice = createSlice({\n+  name: \"message\",\n+  initialState,\n+  reducers: {\n+    setMessage: (state, action) => {\n+      console.log(action.payload, \"check action payload\")\n+      return { message: action.payload };\n+    },\n+    clearMessage: () => {\n+      console.log('clear Message')\n+      return { message: \"\" };\n+    },\n+  },\n+});\n+\n+const { reducer, actions } = messageSlice;\n+\n+export const { setMessage, clearMessage } = actions;\n+export default reducer;\n"
+                }
+            ],
+            "date": 1701257149284,
+            "name": "Commit-0",
+            "content": "import { createSlice } from \"@reduxjs/toolkit\";\n\nconst initialState = {};\n\nconst messageSlice = createSlice({\n  name: \"message\",\n  initialState,\n  reducers: {\n    setMessage: (state, action) => {\n      return { message: action.payload };\n    },\n    clearMessage: () => {\n      console.log('clear Message')\n      return { message: \"\" };\n    },\n  },\n});\n\nconst { reducer, actions } = messageSlice;\n\nexport const { setMessage, clearMessage } = actions;\nexport default reducer;\n"
+        }
+    ]
+}

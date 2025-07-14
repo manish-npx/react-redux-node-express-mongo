@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/pages/admin/contacts/Contacts.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1701447134343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701447410587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import React from \"react\";\n \n const Contacts = () => {\n   return (\n-    <div>\n-      \n-    </div>\n-  )\n+    <>\n+      <h1>Contacts</h1>\n+    </>\n+  );\n }\n \n export default Contacts\n"
+                }
+            ],
+            "date": 1701447134343,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\n\nconst Contacts = () => {\n  return (\n    <div>\n      \n    </div>\n  )\n}\n\nexport default Contacts\n"
+        }
+    ]
+}

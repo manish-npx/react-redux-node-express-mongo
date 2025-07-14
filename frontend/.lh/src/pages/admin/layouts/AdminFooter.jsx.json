@@ -1,0 +1,98 @@
+{
+    "sourceFile": "src/pages/admin/layouts/AdminFooter.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 20,
+            "patches": [
+                {
+                    "date": 1701433373183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701435860329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,62 +1,9 @@\n const AdminFooter = () => {\n   return (\n     <>\n-      <footer className=\"page-footer font-small blue pt-4\">\n-        <div className=\"container-fluid text-center text-md-left\">\n-          <div className=\"row\">\n-            <div className=\"col-md-6 mt-md-0 mt-3\">\n-              <h5 className=\"text-uppercase\">Footer Content</h5>\n-              <p>\n-                Here you can use rows and columns to organize your footer\n-                content.\n-              </p>\n-            </div>\n-\n-            <hr className=\"clearfix w-100 d-md-none pb-0\" />\n-\n-            <div className=\"col-md-3 mb-md-0 mb-3\">\n-              <h5 className=\"text-uppercase\">Links</h5>\n-              <ul className=\"list-unstyled\">\n-                <li>\n-                  <a href=\"#!\">Link 1</a>\n-                </li>\n-                <li>\n-                  <a href=\"#!\">Link 2</a>\n-                </li>\n-                <li>\n-                  <a href=\"#!\">Link 3</a>\n-                </li>\n-                <li>\n-                  <a href=\"#!\">Link 4</a>\n-                </li>\n-              </ul>\n-            </div>\n-\n-            <div className=\"col-md-3 mb-md-0 mb-3\">\n-              <h5 className=\"text-uppercase\">Links</h5>\n-              <ul className=\"list-unstyled\">\n-                <li>\n-                  <a href=\"#!\">Link 1</a>\n-                </li>\n-                <li>\n-                  <a href=\"#!\">Link 2</a>\n-                </li>\n-                <li>\n-                  <a href=\"#!\">Link 3</a>\n-                </li>\n-                <li>\n-                  <a href=\"#!\">Link 4</a>\n-                </li>\n-              </ul>\n-            </div>\n-          </div>\n-        </div>\n-\n-        <div className=\"footer-copyright text-center py-3\">\n-          © 2020 Copyright:\n-          <a href=\"https://mdbootstrap.com/\"> MDBootstrap.com</a>\n-        </div>\n+      <footer className=\"bg-light text-center text-lg-start\">\n+        <div className=\"text-center p-3\">© 2023 Bing</div>\n       </footer>\n     </>\n   );\n };\n"
+                },
+                {
+                    "date": 1701435956738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const AdminFooter = () => {\n   return (\n     <>\n       <footer className=\"bg-light text-center text-lg-start\">\n-        <div className=\"text-center p-3\">© 2023 Bing</div>\n+        <div className=\"text-center p-3\">© 2023 BlitzMarteing</div>\n       </footer>\n     </>\n   );\n };\n"
+                },
+                {
+                    "date": 1701435966538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const AdminFooter = () => {\n   return (\n     <>\n       <footer className=\"bg-light text-center text-lg-start\">\n-        <div className=\"text-center p-3\">© 2023 BlitzMarteing</div>\n+        <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n       </footer>\n     </>\n   );\n };\n"
+                },
+                {
+                    "date": 1701441887238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+const AdminFooter = () => {\n+  return (\n+    <>\n+      <footer className=\"bg-dark text-center text-lg-start\">\n+        <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n+      </footer>\n+    </>\n+  );\n+};\n+\n+export default AdminFooter;\n"
+                },
+                {
+                    "date": 1701441900856,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,11 @@\n const AdminFooter = () => {\n   return (\n     <>\n-      <footer className=\"bg-dark text-center text-lg-start\">\n+      <footer className=\"bg-dark text-light text-center text-lg-start\">\n         <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n       </footer>\n     </>\n   );\n };\n \n export default AdminFooter;\n-const AdminFooter = () => {\n-  return (\n-    <>\n-      <footer className=\"bg-light text-center text-lg-start\">\n-        <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n-      </footer>\n-    </>\n-  );\n-};\n-\n-export default AdminFooter;\n"
+                },
+                {
+                    "date": 1701441921126,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n const AdminFooter = () => {\n   return (\n     <>\n+     <Container fluid className=\"container-fluid\">\n       <footer className=\"bg-dark text-light text-center text-lg-start\">\n         <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n+        </Container>\n       </footer>\n     </>\n   );\n };\n"
+                },
+                {
+                    "date": 1701441936075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import Container from \"postcss/lib/container\";\n+\n const AdminFooter = () => {\n   return (\n     <>\n      <Container fluid className=\"container-fluid\">\n"
+                },
+                {
+                    "date": 1701442054056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-import Container from \"postcss/lib/container\";\n+import Container from \"react-bootstrap/Container\";\n \n const AdminFooter = () => {\n   return (\n     <>\n-     <Container fluid className=\"container-fluid\">\n-      <footer className=\"bg-dark text-light text-center text-lg-start\">\n-        <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n-        </Container>\n-      </footer>\n+      <Container fluid className=\"container-fluid\">\n+        <footer className=\"bg-dark text-light text-center text-lg-start\">\n+          <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n+        </footer>\n+      </Container>\n     </>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1701442083949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n const AdminFooter = () => {\n   return (\n     <>\n-      <Container fluid className=\"container-fluid\">\n+      <Container fluid className=\"header container-fluid\">\n         <footer className=\"bg-dark text-light text-center text-lg-start\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n         </footer>\n       </Container>\n"
+                },
+                {
+                    "date": 1701442119910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \n const AdminFooter = () => {\n   return (\n     <>\n-      <Container fluid className=\"header container-fluid\">\n-        <footer className=\"bg-dark text-light text-center text-lg-start\">\n+      <Container fluid className=\"container-fluid\">\n+        <footer className=\"d-flex justify-content-between align-items-md-center bg-dark text-light text-center text-lg-start\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n         </footer>\n       </Container>\n     </>\n"
+                },
+                {
+                    "date": 1701442130100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \n const AdminFooter = () => {\n   return (\n     <>\n-      <Container fluid className=\"container-fluid\">\n-        <footer className=\"d-flex justify-content-between align-items-md-center bg-dark text-light text-center text-lg-start\">\n+      <Container fluid className=\"d-flex justify-content-between align-items-md-centercontainer-fluid\">\n+        <footer className=\"bg-dark text-light text-center text-lg-start\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n         </footer>\n       </Container>\n     </>\n"
+                },
+                {
+                    "date": 1701442141630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n const AdminFooter = () => {\n   return (\n     <>\n-      <Container fluid className=\"d-flex justify-content-between align-items-md-centercontainer-fluid\">\n+      <Container fluid className=\"bg-lg\">\n         <footer className=\"bg-dark text-light text-center text-lg-start\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n         </footer>\n       </Container>\n"
+                },
+                {
+                    "date": 1701442174750,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n const AdminFooter = () => {\n   return (\n     <>\n-      <Container fluid className=\"bg-lg\">\n+      <Container fluid className=\"container-xxl\">\n         <footer className=\"bg-dark text-light text-center text-lg-start\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n         </footer>\n       </Container>\n"
+                },
+                {
+                    "date": 1701442224167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n \n const AdminFooter = () => {\n   return (\n     <>\n+        <footer className=\"bg-dark text-light text-center text-lg-start\">\n       <Container fluid className=\"container-xxl\">\n-        <footer className=\"bg-dark text-light text-center text-lg-start\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n+      </Container>\n         </footer>\n-      </Container>\n     </>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1701442237946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n \n const AdminFooter = () => {\n   return (\n     <>\n-        <footer className=\"bg-dark text-light text-center text-lg-start\">\n-      <Container fluid className=\"container-xxl\">\n+      <footer className=\"bg-dark text-light text-center text-lg-start\">\n+        <Container fluid className=\"container-xxl\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n-      </Container>\n-        </footer>\n+        </Container>\n+      </footer>\n     </>\n   );\n };\n \n"
+                },
+                {
+                    "date": 1701445409472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n const AdminFooter = () => {\n   return (\n     <>\n       <footer className=\"bg-dark text-light text-center text-lg-start\">\n-        <Container fluid className=\"container-xxl\">\n+        <div fluid className=\"container-xxl\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n-        </Container>\n+        </div>\n       </footer>\n     </>\n   );\n };\n"
+                },
+                {
+                    "date": 1701445422584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const AdminFooter = () => {\n   return (\n     <>\n       <footer className=\"bg-dark text-light text-center text-lg-start\">\n-        <div fluid className=\"container-xxl\">\n+        <div className=\"container-fuild\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n         </div>\n       </footer>\n     </>\n"
+                },
+                {
+                    "date": 1701445456256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,10 @@\n \n const AdminFooter = () => {\n   return (\n     <>\n-      <footer className=\"bg-dark text-light text-center text-lg-start\">\n-        <div className=\"container-fuild\">\n+      <footer className=\"bg-dark text-light text-center text-lg-start\" style={width: \"100%\"}>\n+        <div className=\"container-fulid\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n         </div>\n       </footer>\n     </>\n"
+                },
+                {
+                    "date": 1701445462418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n const AdminFooter = () => {\n   return (\n     <>\n-      <footer className=\"bg-dark text-light text-center text-lg-start\" style={width: \"100%\"}>\n+      <footer className=\"bg-dark text-light text-center text-lg-start\" style={width=\"100%\"}>\n         <div className=\"container-fulid\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n         </div>\n       </footer>\n"
+                },
+                {
+                    "date": 1701445467560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n const AdminFooter = () => {\n   return (\n     <>\n-      <footer className=\"bg-dark text-light text-center text-lg-start\" style={width=\"100%\"}>\n+      <footer className=\"bg-dark text-light text-center text-lg-start\">\n         <div className=\"container-fulid\">\n           <div className=\"text-center p-3\">© 2023 BlitzMarketing</div>\n         </div>\n       </footer>\n"
+                }
+            ],
+            "date": 1701433373183,
+            "name": "Commit-0",
+            "content": "const AdminFooter = () => {\n  return (\n    <>\n      <footer className=\"page-footer font-small blue pt-4\">\n        <div className=\"container-fluid text-center text-md-left\">\n          <div className=\"row\">\n            <div className=\"col-md-6 mt-md-0 mt-3\">\n              <h5 className=\"text-uppercase\">Footer Content</h5>\n              <p>\n                Here you can use rows and columns to organize your footer\n                content.\n              </p>\n            </div>\n\n            <hr className=\"clearfix w-100 d-md-none pb-0\" />\n\n            <div className=\"col-md-3 mb-md-0 mb-3\">\n              <h5 className=\"text-uppercase\">Links</h5>\n              <ul className=\"list-unstyled\">\n                <li>\n                  <a href=\"#!\">Link 1</a>\n                </li>\n                <li>\n                  <a href=\"#!\">Link 2</a>\n                </li>\n                <li>\n                  <a href=\"#!\">Link 3</a>\n                </li>\n                <li>\n                  <a href=\"#!\">Link 4</a>\n                </li>\n              </ul>\n            </div>\n\n            <div className=\"col-md-3 mb-md-0 mb-3\">\n              <h5 className=\"text-uppercase\">Links</h5>\n              <ul className=\"list-unstyled\">\n                <li>\n                  <a href=\"#!\">Link 1</a>\n                </li>\n                <li>\n                  <a href=\"#!\">Link 2</a>\n                </li>\n                <li>\n                  <a href=\"#!\">Link 3</a>\n                </li>\n                <li>\n                  <a href=\"#!\">Link 4</a>\n                </li>\n              </ul>\n            </div>\n          </div>\n        </div>\n\n        <div className=\"footer-copyright text-center py-3\">\n          © 2020 Copyright:\n          <a href=\"https://mdbootstrap.com/\"> MDBootstrap.com</a>\n        </div>\n      </footer>\n    </>\n  );\n};\n\nexport default AdminFooter;\n"
+        }
+    ]
+}

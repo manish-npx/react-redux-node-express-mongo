@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/helpers/alert.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1701193918382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1701193918382,
+            "name": "Commit-0",
+            "content": "const successMsg = () => {};\n"
+        }
+    ]
+}

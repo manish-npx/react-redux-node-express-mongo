@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/components/Alert.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1701268990028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701268999393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import React from 'react'\n+import Alert from 'react-bootstrap/Alert';\n \n+\n const Alert = () => {\n     return (\n         <>\n             <Alert key={variant} variant={variant}>\n"
+                },
+                {
+                    "date": 1701269014266,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,13 @@\n import React from 'react'\n import Alert from 'react-bootstrap/Alert';\n \n \n+/**\n+ * Renders an Alert component.\n+ *\n+ * @return {ReactElement} The rendered Alert component.\n+ */\n const Alert = () => {\n     return (\n         <>\n             <Alert key={variant} variant={variant}>\n"
+                },
+                {
+                    "date": 1701269027933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n const Alert = () => {\n     return (\n         <>\n             <Alert key={variant} variant={variant}>\n-                This is a {variant} alert—check it out!\n+\n             </Alert>\n \n         </>\n     )\n"
+                },
+                {
+                    "date": 1701269042949,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n  */\n const Alert = () => {\n     return (\n         <>\n-            <Alert key={variant} variant={variant}>\n+            <Alert variant={variant}>\n \n             </Alert>\n \n         </>\n"
+                },
+                {
+                    "date": 1701269055448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n  * Renders an Alert component.\n  *\n  * @return {ReactElement} The rendered Alert component.\n  */\n-const Alert = () => {\n+const Alert = ({ variant, message }) => {\n     return (\n         <>\n             <Alert variant={variant}>\n \n"
+                },
+                {
+                    "date": 1701269417433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n  */\n const Alert = ({ variant, message }) => {\n     return (\n         <>\n-            <Alert variant={variant}>\n-\n+            <Alert variant={variant} dismissible>\n+                {message}\n             </Alert>\n \n         </>\n     )\n"
+                },
+                {
+                    "date": 1701269425521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,14 +8,12 @@\n  * @return {ReactElement} The rendered Alert component.\n  */\n const Alert = ({ variant, message }) => {\n     return (\n-        <>\n-            <Alert variant={variant} dismissible>\n-                {message}\n-            </Alert>\n+        <Alert variant={variant} dismissible>\n+            {message}\n+        </Alert>\n \n-        </>\n     )\n }\n \n export default Alert\n"
+                },
+                {
+                    "date": 1701429866236,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,28 @@\n-import React from 'react'\n-import Alert from 'react-bootstrap/Alert';\n+import React from \"react\";\n+import toast, { Toaster } from \"react-hot-toast\";\n \n-\n /**\n  * Renders an Alert component.\n  *\n  * @return {ReactElement} The rendered Alert component.\n  */\n const Alert = ({ variant, message }) => {\n-    return (\n-        <Alert variant={variant} dismissible>\n-            {message}\n-        </Alert>\n+  const notify = () =>\n+    toast(\"Here is your toast.\", {\n+      duration: 4000,\n+      position: \"top-center\",\n+      // Aria\n+      ariaProps: {\n+        role: \"status\",\n+        \"aria-live\": \"polite\",\n+      },\n+    });\n \n-    )\n-}\n+  return (\n+    <Alert variant={variant} dismissible>\n+      {message}\n+    </Alert>\n+  );\n+};\n \n-export default Alert\n+export default Alert;\n"
+                },
+                {
+                    "date": 1701429882582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n   const notify = () =>\n     toast(\"Here is your toast.\", {\n       duration: 4000,\n       position: \"top-center\",\n+\n       // Aria\n       ariaProps: {\n         role: \"status\",\n         \"aria-live\": \"polite\",\n"
+                }
+            ],
+            "date": 1701268990028,
+            "name": "Commit-0",
+            "content": "import React from 'react'\n\nconst Alert = () => {\n    return (\n        <>\n            <Alert key={variant} variant={variant}>\n                This is a {variant} alert—check it out!\n            </Alert>\n\n        </>\n    )\n}\n\nexport default Alert\n"
+        }
+    ]
+}

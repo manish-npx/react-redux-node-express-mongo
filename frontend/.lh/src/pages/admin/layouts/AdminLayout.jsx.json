@@ -1,0 +1,134 @@
+{
+    "sourceFile": "src/pages/admin/layouts/AdminLayout.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 29,
+            "patches": [
+                {
+                    "date": 1701255204047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701255209248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import AdminHeader from './AdminHeader'\n+import AdminFooter from './AdminFooter'\n+import AdminNavBar from './AdminNavBar'\n+import AdminSideBar from './AdminSideBar'\n+\n+const AdminLayout = ({ children }) => {\n+    return (\n+        <>\n+            <AdminHeader />\n+            <AdminNavBar />\n+            <AdminSideBar />\n+\n+            {children}\n+\n+            <AdminFooter />\n+        </>\n+    )\n+}\n+\n+export default AdminLayout\n"
+                },
+                {
+                    "date": 1701255264240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,20 @@\n+import AdminHeader from './AdminHeader'\n+import AdminFooter from './AdminFooter'\n+import AdminNavBar from './AdminNavBar'\n+import AdminSideBar from './AdminSideBar'\n+\n+const AdminLayout = ({ children }) => {\n+    return (\n+        <>\n+            <AdminHeader />\n+            {/* <AdminNavBar />\n+            <AdminSideBar /> */}\n+\n+            {children}\n+\n+            <AdminFooter />\n+        </>\n+    )\n+}\n+\n+export default AdminLayout\n"
+                },
+                {
+                    "date": 1701255301914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,28 +6,8 @@\n const AdminLayout = ({ children }) => {\n     return (\n         <>\n             <AdminHeader />\n-            {/* <AdminNavBar />\n-            <AdminSideBar /> */}\n-\n-            {children}\n-\n-            <AdminFooter />\n-        </>\n-    )\n-}\n-\n-export default AdminLayout\n-import AdminHeader from './AdminHeader'\n-import AdminFooter from './AdminFooter'\n-import AdminNavBar from './AdminNavBar'\n-import AdminSideBar from './AdminSideBar'\n-\n-const AdminLayout = ({ children }) => {\n-    return (\n-        <>\n-            <AdminHeader />\n             <AdminNavBar />\n             <AdminSideBar />\n \n             {children}\n@@ -37,24 +17,4 @@\n     )\n }\n \n export default AdminLayout\n-import AdminHeader from './AdminHeader'\n-import AdminFooter from './AdminFooter'\n-import AdminNavBar from './AdminNavBar'\n-import AdminSideBar from './AdminSideBar'\n-\n-const AdminLayout = ({ children }) => {\n-    return (\n-        <>\n-            <AdminNavBar />\n-            <AdminHeader />\n-            <AdminSideBar />\n-\n-            {children}\n-\n-            <AdminFooter />\n-        </>\n-    )\n-}\n-\n-export default AdminLayout\n"
+                },
+                {
+                    "date": 1701256049878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,11 @@\n import AdminNavBar from './AdminNavBar'\n import AdminSideBar from './AdminSideBar'\n \n const AdminLayout = ({ children }) => {\n+\n+    const { user } = useSelector((state) => state.auth);\n+\n     return (\n         <>\n             <AdminHeader />\n             <AdminNavBar />\n"
+                },
+                {
+                    "date": 1701256068773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import AdminHeader from './AdminHeader'\n import AdminFooter from './AdminFooter'\n import AdminNavBar from './AdminNavBar'\n import AdminSideBar from './AdminSideBar'\n+import { useDispatch, useSelector } from \"react-redux\";\n \n+\n const AdminLayout = ({ children }) => {\n \n     const { user } = useSelector((state) => state.auth);\n \n"
+                },
+                {
+                    "date": 1701256076838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import { useEffect, useState } from \"react\";\n+\n import AdminHeader from './AdminHeader'\n import AdminFooter from './AdminFooter'\n import AdminNavBar from './AdminNavBar'\n import AdminSideBar from './AdminSideBar'\n"
+                },
+                {
+                    "date": 1701256115463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import { useEffect, useState } from \"react\";\n-\n import AdminHeader from './AdminHeader'\n import AdminFooter from './AdminFooter'\n import AdminNavBar from './AdminNavBar'\n import AdminSideBar from './AdminSideBar'\n@@ -16,8 +15,9 @@\n             <AdminHeader />\n             <AdminNavBar />\n             <AdminSideBar />\n \n+            {user}\n             {children}\n \n             <AdminFooter />\n         </>\n"
+                },
+                {
+                    "date": 1701256140951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             <AdminHeader />\n             <AdminNavBar />\n             <AdminSideBar />\n \n-            {user}\n+            {user.name}\n             {children}\n \n             <AdminFooter />\n         </>\n"
+                },
+                {
+                    "date": 1701256273205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n     return (\n         <>\n             <AdminHeader />\n-            <AdminNavBar />\n+            <AdminNavBar props={user} />\n             <AdminSideBar />\n \n             {user.name}\n             {children}\n"
+                },
+                {
+                    "date": 1701256282497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,26 @@\n+import { useEffect, useState } from \"react\";\n+import AdminHeader from './AdminHeader'\n+import AdminFooter from './AdminFooter'\n+import AdminNavBar from './AdminNavBar'\n+import AdminSideBar from './AdminSideBar'\n+import { useDispatch, useSelector } from \"react-redux\";\n+\n+\n+const AdminLayout = ({ children }) => {\n+\n+    const { user } = useSelector((state) => state.auth);\n+\n+    return (\n+        <>\n+            <AdminHeader />\n+            <AdminNavBar props={user} />\n+            <AdminSideBar />\n+\n+            {children}\n+\n+            <AdminFooter />\n+        </>\n+    )\n+}\n+\n+export default AdminLayout\n"
+                },
+                {
+                    "date": 1701264174048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n \n     return (\n         <>\n             <AdminHeader />\n-            <AdminNavBar props={user} />\n+            <AdminNavBar user={user} />\n             <AdminSideBar />\n \n             {children}\n \n@@ -23,31 +23,4 @@\n     )\n }\n \n export default AdminLayout\n-import { useEffect, useState } from \"react\";\n-import AdminHeader from './AdminHeader'\n-import AdminFooter from './AdminFooter'\n-import AdminNavBar from './AdminNavBar'\n-import AdminSideBar from './AdminSideBar'\n-import { useDispatch, useSelector } from \"react-redux\";\n-\n-\n-const AdminLayout = ({ children }) => {\n-\n-    const { user } = useSelector((state) => state.auth);\n-\n-    return (\n-        <>\n-            <AdminHeader />\n-            <AdminNavBar props={user} />\n-            <AdminSideBar />\n-\n-            {user.name}\n-            {children}\n-\n-            <AdminFooter />\n-        </>\n-    )\n-}\n-\n-export default AdminLayout\n"
+                },
+                {
+                    "date": 1701264184296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n     return (\n         <>\n             <AdminHeader />\n             <AdminNavBar user={user} />\n-            <AdminSideBar />\n+            <AdminSideBar user={user} />\n \n             {children}\n \n             <AdminFooter />\n"
+                },
+                {
+                    "date": 1701264210441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n     const { user } = useSelector((state) => state.auth);\n \n     return (\n         <>\n+            console.log('admin ==== user',user)\n             <AdminHeader />\n             <AdminNavBar user={user} />\n             <AdminSideBar user={user} />\n \n"
+                },
+                {
+                    "date": 1701264219123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     const { user } = useSelector((state) => state.auth);\n \n     return (\n         <>\n-            console.log('admin ==== user',user)\n+            {console.log('admin ==== user', user)}\n             <AdminHeader />\n             <AdminNavBar user={user} />\n             <AdminSideBar user={user} />\n \n"
+                },
+                {
+                    "date": 1701264543285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,18 +3,35 @@\n import AdminFooter from './AdminFooter'\n import AdminNavBar from './AdminNavBar'\n import AdminSideBar from './AdminSideBar'\n import { useDispatch, useSelector } from \"react-redux\";\n+import { useNavigate } from 'react-router-dom'\n+import { useDispatch } from \"react-redux\";\n+import { removeItem, getItem } from '../../../helpers/persistenceStorage'\n+import { handleLogout } from '../../../redux/slices/auth';\n \n \n+\n const AdminLayout = ({ children }) => {\n \n+    const navigate = useNavigate();\n+    const dispatch = useDispatch()\n     const { user } = useSelector((state) => state.auth);\n+    const handelUserLogout = () => {\n+        removeItem('token');\n+        dispatch(handleLogout())\n+        navigate(\"/\")\n+    }\n \n+\n+\n+\n     return (\n         <>\n             {console.log('admin ==== user', user)}\n             <AdminHeader />\n+            <button onClick={handelUserLogout} className=\"btn btn-primary\">Logout</button>\n+\n             <AdminNavBar user={user} />\n             <AdminSideBar user={user} />\n \n             {children}\n"
+                },
+                {
+                    "date": 1701264581190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,43 @@\n+import { useEffect, useState } from \"react\";\n+import AdminHeader from './AdminHeader'\n+import AdminFooter from './AdminFooter'\n+import AdminNavBar from './AdminNavBar'\n+import AdminSideBar from './AdminSideBar'\n+import { useDispatch, useSelector } from \"react-redux\";\n+import { useNavigate } from 'react-router-dom'\n+import { removeItem, } from '../../../helpers/persistenceStorage'\n+import { handleLogout } from '../../../redux/slices/auth';\n+\n+\n+\n+const AdminLayout = ({ children }) => {\n+\n+    const navigate = useNavigate();\n+    const dispatch = useDispatch()\n+    const { user } = useSelector((state) => state.auth);\n+    const handelUserLogout = () => {\n+        removeItem('token');\n+        dispatch(handleLogout())\n+        navigate(\"/\")\n+    }\n+\n+\n+\n+\n+    return (\n+        <>\n+            {console.log('admin ==== user', user)}\n+            <AdminHeader />\n+            <button onClick={handelUserLogout} className=\"btn btn-primary\">Logout</button>\n+\n+            <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n+            <AdminSideBar user={user} />\n+\n+            {children}\n+\n+            <AdminFooter />\n+        </>\n+    )\n+}\n+\n+export default AdminLayout\n"
+                },
+                {
+                    "date": 1701264587334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n             <AdminHeader />\n             <button onClick={handelUserLogout} className=\"btn btn-primary\">Logout</button>\n \n             <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n-            <AdminSideBar user={user} />\n+            <AdminSideBar user={user} handelUserLogout={handelUserLogout} />\n \n             {children}\n \n             <AdminFooter />\n@@ -40,48 +40,4 @@\n     )\n }\n \n export default AdminLayout\n-import { useEffect, useState } from \"react\";\n-import AdminHeader from './AdminHeader'\n-import AdminFooter from './AdminFooter'\n-import AdminNavBar from './AdminNavBar'\n-import AdminSideBar from './AdminSideBar'\n-import { useDispatch, useSelector } from \"react-redux\";\n-import { useNavigate } from 'react-router-dom'\n-import { useDispatch } from \"react-redux\";\n-import { removeItem, getItem } from '../../../helpers/persistenceStorage'\n-import { handleLogout } from '../../../redux/slices/auth';\n-\n-\n-\n-const AdminLayout = ({ children }) => {\n-\n-    const navigate = useNavigate();\n-    const dispatch = useDispatch()\n-    const { user } = useSelector((state) => state.auth);\n-    const handelUserLogout = () => {\n-        removeItem('token');\n-        dispatch(handleLogout())\n-        navigate(\"/\")\n-    }\n-\n-\n-\n-\n-    return (\n-        <>\n-            {console.log('admin ==== user', user)}\n-            <AdminHeader />\n-            <button onClick={handelUserLogout} className=\"btn btn-primary\">Logout</button>\n-\n-            <AdminNavBar user={user} />\n-            <AdminSideBar user={user} />\n-\n-            {children}\n-\n-            <AdminFooter />\n-        </>\n-    )\n-}\n-\n-export default AdminLayout\n"
+                },
+                {
+                    "date": 1701264595278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,42 @@\n+import { useEffect, useState } from \"react\";\n+import AdminHeader from './AdminHeader'\n+import AdminFooter from './AdminFooter'\n+import AdminNavBar from './AdminNavBar'\n+import AdminSideBar from './AdminSideBar'\n+import { useDispatch, useSelector } from \"react-redux\";\n+import { useNavigate } from 'react-router-dom'\n+import { removeItem, } from '../../../helpers/persistenceStorage'\n+import { handleLogout } from '../../../redux/slices/auth';\n+\n+\n+\n+const AdminLayout = ({ children }) => {\n+\n+    const navigate = useNavigate();\n+    const dispatch = useDispatch()\n+    const { user } = useSelector((state) => state.auth);\n+    const handelUserLogout = () => {\n+        removeItem('token');\n+        dispatch(handleLogout())\n+        navigate(\"/\")\n+    }\n+\n+\n+\n+\n+    return (\n+        <>\n+            {console.log('admin ==== user', user)}\n+            <AdminHeader />\n+\n+            <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n+            <AdminSideBar user={user} handelUserLogout={handelUserLogout} />\n+\n+            {children}\n+\n+            <AdminFooter />\n+        </>\n+    )\n+}\n+\n+export default AdminLayout\n"
+                },
+                {
+                    "date": 1701264768560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,12 +25,10 @@\n \n \n     return (\n         <>\n-            {console.log('admin ==== user', user)}\n             <AdminHeader />\n-\n-            <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n+            <AdminNavBar />\n             <AdminSideBar user={user} handelUserLogout={handelUserLogout} />\n \n             {children}\n \n@@ -39,47 +37,4 @@\n     )\n }\n \n export default AdminLayout\n-import { useEffect, useState } from \"react\";\n-import AdminHeader from './AdminHeader'\n-import AdminFooter from './AdminFooter'\n-import AdminNavBar from './AdminNavBar'\n-import AdminSideBar from './AdminSideBar'\n-import { useDispatch, useSelector } from \"react-redux\";\n-import { useNavigate } from 'react-router-dom'\n-import { removeItem, } from '../../../helpers/persistenceStorage'\n-import { handleLogout } from '../../../redux/slices/auth';\n-\n-\n-\n-const AdminLayout = ({ children }) => {\n-\n-    const navigate = useNavigate();\n-    const dispatch = useDispatch()\n-    const { user } = useSelector((state) => state.auth);\n-    const handelUserLogout = () => {\n-        removeItem('token');\n-        dispatch(handleLogout())\n-        navigate(\"/\")\n-    }\n-\n-\n-\n-\n-    return (\n-        <>\n-            {console.log('admin ==== user', user)}\n-            <AdminHeader />\n-            <button onClick={handelUserLogout} className=\"btn btn-primary\">Logout</button>\n-\n-            <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n-            <AdminSideBar user={user} handelUserLogout={handelUserLogout} />\n-\n-            {children}\n-\n-            <AdminFooter />\n-        </>\n-    )\n-}\n-\n-export default AdminLayout\n"
+                },
+                {
+                    "date": 1701273092806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,14 @@\n+import AdminFooter from \"./AdminFooter\";\n+import AdminHeader from \"./AdminHeader\";\n+import AdminNavBar from \"./AdminNavBar\";\n+import AdminSideBar from \"./AdminSideBar\";\n import { useEffect, useState } from \"react\";\n-import AdminHeader from './AdminHeader'\n-import AdminFooter from './AdminFooter'\n-import AdminNavBar from './AdminNavBar'\n-import AdminSideBar from './AdminSideBar'\n import { useDispatch, useSelector } from \"react-redux\";\n-import { useNavigate } from 'react-router-dom'\n-import { removeItem, } from '../../../helpers/persistenceStorage'\n-import { handleLogout } from '../../../redux/slices/auth';\n+import { useNavigate } from \"react-router-dom\";\n+import { , removeItem } from \"../../../helpers/persistenceStorage\";\n+import { handleLogout } from \"../../../redux/slices/auth\";\n \n-\n-\n const AdminLayout = ({ children }) => {\n \n     const navigate = useNavigate();\n     const dispatch = useDispatch()\n@@ -27,9 +25,9 @@\n     return (\n         <>\n             <AdminHeader />\n             <AdminNavBar />\n-            <AdminSideBar user={user} handelUserLogout={handelUserLogout} />\n+            <AdminSideBar  />\n \n             {children}\n \n             <AdminFooter />\n"
+                },
+                {
+                    "date": 1701273219006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n \n     return (\n         <>\n             <AdminHeader />\n-            <AdminNavBar />\n-            <AdminSideBar  />\n+            <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n+            <AdminSideBar />\n \n             {children}\n \n             <AdminFooter />\n"
+                },
+                {
+                    "date": 1701273239295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,8 @@\n         dispatch(handleLogout())\n         navigate(\"/\")\n     }\n \n-\n-\n-\n     return (\n         <>\n             <AdminHeader />\n             <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n"
+                },
+                {
+                    "date": 1701273268924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import AdminSideBar from \"./AdminSideBar\";\n import { useEffect, useState } from \"react\";\n import { useDispatch, useSelector } from \"react-redux\";\n import { useNavigate } from \"react-router-dom\";\n-import { , removeItem } from \"../../../helpers/persistenceStorage\";\n+import { removeItem } from \"../../../helpers/persistenceStorage\";\n import { handleLogout } from \"../../../redux/slices/auth\";\n \n const AdminLayout = ({ children }) => {\n \n"
+                },
+                {
+                    "date": 1701342979630,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,28 +8,27 @@\n import { removeItem } from \"../../../helpers/persistenceStorage\";\n import { handleLogout } from \"../../../redux/slices/auth\";\n \n const AdminLayout = ({ children }) => {\n+  const navigate = useNavigate();\n+  const dispatch = useDispatch();\n+  const { user } = useSelector((state) => state.auth);\n+  const handelUserLogout = () => {\n+    removeItem(\"token\");\n+    dispatch(handleLogout());\n+    navigate(\"/\");\n+  };\n \n-    const navigate = useNavigate();\n-    const dispatch = useDispatch()\n-    const { user } = useSelector((state) => state.auth);\n-    const handelUserLogout = () => {\n-        removeItem('token');\n-        dispatch(handleLogout())\n-        navigate(\"/\")\n-    }\n+  return (\n+    <>\n+      <AdminHeader />\n+      <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n+      <AdminSideBar />\n \n-    return (\n-        <>\n-            <AdminHeader />\n-            <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n-            <AdminSideBar />\n+      {children}\n \n-            {children}\n+      <AdminFooter />\n+    </>\n+  );\n+};\n \n-            <AdminFooter />\n-        </>\n-    )\n-}\n-\n-export default AdminLayout\n+export default AdminLayout;\n"
+                },
+                {
+                    "date": 1701345245184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,10 @@\n   };\n \n   return (\n     <>\n+      <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n       <AdminHeader />\n-      <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n       <AdminSideBar />\n \n       {children}\n \n"
+                },
+                {
+                    "date": 1701345261703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import AdminFooter from \"./AdminFooter\";\n import AdminHeader from \"./AdminHeader\";\n import AdminNavBar from \"./AdminNavBar\";\n import AdminSideBar from \"./AdminSideBar\";\n-import { useEffect, useState } from \"react\";\n import { useDispatch, useSelector } from \"react-redux\";\n import { useNavigate } from \"react-router-dom\";\n import { removeItem } from \"../../../helpers/persistenceStorage\";\n import { handleLogout } from \"../../../redux/slices/auth\";\n@@ -19,10 +18,10 @@\n   };\n \n   return (\n     <>\n+      <AdminHeader />\n       <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n-      <AdminHeader />\n       <AdminSideBar />\n \n       {children}\n \n"
+                },
+                {
+                    "date": 1701436728541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n       <AdminHeader />\n       <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n       <AdminSideBar />\n \n-      {children}\n+      <main>{children}</main>\n \n       <AdminFooter />\n     </>\n   );\n"
+                },
+                {
+                    "date": 1701436758742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,11 +21,9 @@\n     <>\n       <AdminHeader />\n       <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n       <AdminSideBar />\n-\n       <main>{children}</main>\n-\n       <AdminFooter />\n     </>\n   );\n };\n"
+                },
+                {
+                    "date": 1701441575956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+import AdminFooter from \"./AdminFooter\";\n+import AdminHeader from \"./AdminHeader\";\n+import AdminNavBar from \"./AdminNavBar\";\n+import AdminSideBar from \"./AdminSideBar\";\n+import { useDispatch, useSelector } from \"react-redux\";\n+import { useNavigate } from \"react-router-dom\";\n+import { removeItem } from \"../../../helpers/persistenceStorage\";\n+import { handleLogout } from \"../../../redux/slices/auth\";\n+\n+const AdminLayout = ({ children }) => {\n+  const navigate = useNavigate();\n+  const dispatch = useDispatch();\n+  const { user } = useSelector((state) => state.auth);\n+  const handelUserLogout = () => {\n+    removeItem(\"token\");\n+    dispatch(handleLogout());\n+    navigate(\"/\");\n+  };\n+\n+  return (\n+    <>\n+      <AdminHeader user={user} handelUserLogout={handelUserLogout} />\n+      <AdminNavBar user={user} handelUserLogout={handelUserLogout} />\n+      <AdminSideBar />\n+      <main>{children}</main>\n+      <AdminFooter />\n+    </>\n+  );\n+};\n+\n+export default AdminLayout;\n"
+                }
+            ],
+            "date": 1701255204047,
+            "name": "Commit-0",
+            "content": "import AdminHeader from './AdminHeader'\nimport AdminFooter from './AdminFooter'\nimport AdminNavBar from './AdminNavBar'\nimport AdminSideBar from './AdminSideBar'\n\nconst AdminLayout = ({ children }) => {\n    return (\n        <>\n            <AdminNavBar />\n            <AdminHeader />\n            <AdminSideBar />\n\n            {children}\n\n            <AdminFooter />\n        </>\n    )\n}\n\nexport default AdminLayout\n"
+        }
+    ]
+}

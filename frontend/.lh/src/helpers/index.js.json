@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/helpers/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1701194013058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1701194125307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+export const redirectPath = (pathName) => {\n+  setTimeout(() => {\n+    return true;\n+  }, 3000);\n+};\n"
+                },
+                {
+                    "date": 1701194157775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-export const redirectPath = (pathName) => {\n+export const redirectPath = () => {\n   setTimeout(() => {\n     return true;\n   }, 3000);\n };\n-export const redirectPath = () => {};\n"
+                },
+                {
+                    "date": 1701194500768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+export const redirectPath = () => {\n+  return setTimeout(() => {\n+    return true;\n+  }, 3000);\n+};\n"
+                },
+                {
+                    "date": 1701194535086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+export const redirectPath = () => {\n+  return setTimeout(() => {\n+    return true;\n+  }, 30000);\n+};\n"
+                },
+                {
+                    "date": 1701194548558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,5 @@\n+export const redirectPath = () => {\n+  return setTimeout(() => {\n+    return true;\n+  }, 3000);\n+};\n"
+                },
+                {
+                    "date": 1701194598939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+export const redirectPath = () => {\n+  alert(\"hello\");\n+  return setTimeout(() => {\n+    return true;\n+  }, 3000);\n+};\n"
+                },
+                {
+                    "date": 1701251316861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,6 @@\n export const redirectPath = () => {\n-  alert(\"hello\");\n-  return setTimeout(() => {\n-    return true;\n-  }, 3000);\n+    console.log(\"hello\");\n+    return setTimeout(() => {\n+        return true;\n+    }, 3000);\n };\n-export const redirectPath = () => {\n-  return setTimeout(() => {\n-    return true;\n-  }, 3000);\n-};\n-export const redirectPath = () => {\n-  return setTimeout(() => {\n-    return true;\n-  }, 30000);\n-};\n-export const redirectPath = () => {\n-  return setTimeout(() => {\n-    return true;\n-  }, 3000);\n-};\n-export const redirectPath = () => {\n-  setTimeout(() => {\n-    return true;\n-  }, 3000);\n-};\n"
+                },
+                {
+                    "date": 1701251332069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export const redirectPath = () => {\n-    console.log(\"hello\");\n+    console.info(\"redirect path\");\n     return setTimeout(() => {\n         return true;\n     }, 3000);\n };\n"
+                },
+                {
+                    "date": 1701254075209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n export const redirectPath = () => {\n-    console.info(\"redirect path\");\n+    console.info(\"\"From Helpers\" redirect path\");\n     return setTimeout(() => {\n         return true;\n     }, 3000);\n };\n"
+                },
+                {
+                    "date": 1701254082064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+export const redirectPath = () => {\n+    console.info('\"From Helpers\" redirect path');\n+    return setTimeout(() => {\n+        return true;\n+    }, 3000);\n+};\n"
+                },
+                {
+                    "date": 1701255985359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,6 @@\n export const redirectPath = () => {\n-    console.info('\"From Helpers\" redirect path');\n+    //console.info('\"From Helpers\" redirect path');\n     return setTimeout(() => {\n         return true;\n     }, 3000);\n };\n-export const redirectPath = () => {\n-    console.info(\"\"From Helpers\" redirect path\");\n-    return setTimeout(() => {\n-        return true;\n-    }, 3000);\n-};\n"
+                }
+            ],
+            "date": 1701194013058,
+            "name": "Commit-0",
+            "content": "export const redirectPath = () => {};\n"
+        }
+    ]
+}
